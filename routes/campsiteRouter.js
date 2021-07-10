@@ -79,7 +79,7 @@ campsiteRouter
   .post(
     cors.corsWithOptions,
     authenticate.verifyUser,
-    Authenticate.verifyAdmin,
+    authenticate.verifyAdmin,
     (req, res) => {
       res.statusCode = 403;
       res.end(
